@@ -1,0 +1,27 @@
+.alert {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff71a5;
+  border-radius: 10px;
+  padding: 30px 20px;
+  min-width: 480px;
+  color: #fff;
+  height: 400px;
+  overflow-y: scroll;
+}
+.event {
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.404);
+  padding: 20px;
+  border-radius: 10px;
+}
+.event1 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px #fff solid;
+}
+.event2 {
+  padding-top: 10px;
+}

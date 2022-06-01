@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0d0f1c;
+  display: grid;
+  grid-template-columns: 500px 3fr;
+  grid-template-rows: 1fr;
+  padding-bottom: 20px;
+}
+.time-section {
+  grid-area: time;
+}
+.forecast-section {
+  grid-area: forecast;
+}
+.air-section {
+  grid-area: air;
+}
+.pre-section {
+  grid-area: pre;
+}
+.sun-section {
+  grid-area: sun;
+}
+.app__left {
+  max-width: 1400px;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 180px 350px 1fr;
+  grid-template-areas:
+    "time time time" "air pre sun"
+    "forecast forecast forecast";
 }
 
-.App-link {
-  color: #61dafb;
+.app__right {
+  justify-self: start;
+  background-color: #0d0f1c;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+*::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .app__left {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+    grid-template-areas: "air" "pre" "sun" "forecast";
+    grid-gap: 0px;
+    grid-row-gap: 10px;
+  }
+  .time-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .app__left {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+    grid-template-areas: "air pre" "sun sun" "forecast forecast";
+    grid-gap: 0px;
+    grid-row-gap: 10px;
+  }
+  .time-section {
+    display: none;
   }
 }

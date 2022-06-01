@@ -1,0 +1,103 @@
+.sun {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  backdrop-filter: invert(0.1);
+  border-radius: 5px;
+  padding: 25px;
+  overflow-y: scroll;
+  height: 100%;
+}
+.sun__heading {
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sun__list {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+.sun__card {
+  width: 200px;
+  border-radius: 5px;
+  padding: 20px 20px;
+  background-color: #fff8f0;
+  margin: 5px 0;
+}
+.sun__card__date {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #0d0f1c;
+}
+.sun__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sun__details__rise,
+.sun__details__set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sun__details__rise__time > p,
+.sun__details__set__time > p {
+  font-size: 1rem;
+  color: #00000091;
+}
+.timing {
+  color: #3377ff !important;
+  font-size: 1.25rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .sun {
+    margin: auto;
+    padding: 5px;
+    max-width: 95vw;
+  }
+  .sun__list {
+    width: 100%;
+  }
+  .sun__card {
+    width: 100%;
+    padding: 10px 15px;
+    justify-self: stretch;
+  }
+  .sun__details__rise__time > p,
+  .sun__details__set__time > p {
+    font-size: 0.8rem;
+    color: #00000091;
+  }
+  .timing {
+    color: #3377ff !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .sun {
+    margin: auto;
+    max-width: 98vw;
+  }
+  .sun__list {
+    width: 100%;
+  }
+  .sun__card {
+    justify-self: stretch;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 20px;
+    background-color: #fff8f0;
+    margin: 5px 0;
+  }
+}
